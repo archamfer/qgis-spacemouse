@@ -2,8 +2,6 @@
 
 Navigate QGIS 2D maps naturally using your 3Dconnexion SpaceMouse device.
 
-![Plugin Demo](screenshot.png)
-
 ## Features
 
 - 🖱️ **Smooth 2D Navigation**: Pan and zoom your QGIS maps using your SpaceMouse
