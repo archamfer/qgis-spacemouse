@@ -3,16 +3,16 @@ name=SpaceMouse Navigation
 qgisMinimumVersion=3.0
 description=Navigate QGIS 2D maps using a 3Dconnexion SpaceMouse device with customizable axis mapping and sensitivity controls
 version=1.0.0
-author=Your Name
-email=your.email@example.com
+author=Jacob Strange
+email=jakojj77@gmail.com
 
 about=This plugin enables smooth 2D map navigation in QGIS using 3Dconnexion SpaceMouse devices. Features include: customizable axis inversion and swapping, adjustable pan and zoom sensitivity, configurable deadzone, and persistent settings. Simply plug in your SpaceMouse, enable the plugin, and start navigating!
 
-tracker=https://github.com/yourusername/qgis-spacemouse/issues
-repository=https://github.com/yourusername/qgis-spacemouse
+tracker=https://github.com/archamfer/qgis-spacemouse/issues
+repository=https://github.com/archamfer/qgis-spacemouse
 tags=3dconnexion,spacemouse,navigation,input device,3d mouse,pan,zoom
 
-homepage=https://github.com/yourusername/qgis-spacemouse
+homepage=https://github.com/archamfer/qgis-spacemouse
 category=Plugins
 icon=icon.png
 experimental=False
