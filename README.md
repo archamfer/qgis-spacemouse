@@ -117,7 +117,7 @@ spacemouse_navigation/
 ### Building from Source
 
 ```bash
-git clone https://github.com/yourusername/qgis-spacemouse.git
+git clone https://github.com/archamfer/qgis-spacemouse.git
 cd qgis-spacemouse
 # Copy to QGIS plugins folder
 ```
@@ -132,12 +132,12 @@ This plugin is released under the GNU General Public License v2 or later.
 
 ## Credits
 
-Created by [Your Name]
+Created by Jacob Strange + Claude
 
 ## Support
 
-- Report issues: [GitHub Issues](https://github.com/yourusername/qgis-spacemouse/issues)
-- Questions: [GitHub Discussions](https://github.com/yourusername/qgis-spacemouse/discussions)
+- Report issues: [GitHub Issues](https://github.com/archamfer/qgis-spacemouse/issues)
+- Questions: [GitHub Discussions](https://github.com/archamfer/qgis-spacemouse/discussions)
 
 ## Changelog
 
