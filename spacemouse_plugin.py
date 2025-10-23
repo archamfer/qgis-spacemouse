@@ -13,11 +13,19 @@ from .settings_dialog import SpaceMouseSettingsDialog
 
 # Try to import HID library
 SPACEMOUSE_AVAILABLE = False
+HID_ERROR = None
 try:
     import hid
     SPACEMOUSE_AVAILABLE = True
-except ImportError:
-    pass
+except ImportError as e:
+    HID_ERROR = str(e)
+    # Try alternative hidapi package
+    try:
+        import hidapi as hid
+        SPACEMOUSE_AVAILABLE = True
+        HID_ERROR = None
+    except ImportError as e2:
+        HID_ERROR = f"hid: {e}\nhidapi: {e2}"
 
 
 class SpaceMouseThread(QThread):
@@ -247,10 +255,15 @@ class SpaceMousePlugin:
         if not SPACEMOUSE_AVAILABLE:
             self.action.setEnabled(False)
             self.settings_action.setEnabled(False)
+            error_msg = "HID library not found.\n\n"
+            error_msg += "Please install using OSGeo4W Shell:\n"
+            error_msg += "python -m pip install hidapi\n\n"
+            if HID_ERROR:
+                error_msg += f"Error details:\n{HID_ERROR}"
             QMessageBox.warning(
                 self.iface.mainWindow(),
                 "SpaceMouse Plugin",
-                "HID library not found. Please install:\npip install hid"
+                error_msg
             )
 
     def unload(self):
